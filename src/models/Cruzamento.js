@@ -7,15 +7,17 @@ const CruzamentoSchema = new mongoose.Schema({
         required: true,
     },
     semaforos: {
-        type: [],
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'Semaforo',
         required: true,
     },
     vias:{
-        type: [],
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'Via',
         required: true,
     },
 });
 
 CruzamentoSchema.plugin(mongoosePaginate);
-
 mongoose.model('Cruzamento', CruzamentoSchema);
+module.exports = CruzamentoSchema;

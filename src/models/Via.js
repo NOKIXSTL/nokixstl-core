@@ -10,12 +10,13 @@ const ViaSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    cruzamentos:{
-        type: [],
+    cruzamentos: {
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'Cruzamento',
         required: true,
     },
 });
 
 ViaSchema.plugin(mongoosePaginate);
-
 mongoose.model('Via', ViaSchema);
+module.exports = ViaSchema;

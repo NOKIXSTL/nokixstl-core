@@ -10,12 +10,17 @@ const SemaforoSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    movimento:{
+    sinal:{
         type: [String],
-        required: true,
+        enum: ['VERDE', 'VERMELHO', 'AMARELO'],
+        default: 'VERMELHO',
+        required: true
     },
 });
 
-SemaforoSchema.plugin(mongoosePaginate);
 
+
+
+SemaforoSchema.plugin(mongoosePaginate);
 mongoose.model('Semaforo', SemaforoSchema);
+module.exports = SemaforoSchema;
