@@ -16,6 +16,12 @@ const SemaforoSchema = new mongoose.Schema({
         default: 'VERMELHO',
         required: true
     },
+    tempo:{
+        type : Number,
+        min: 0,
+        max: 60,
+        required: true
+    }
 });
 
 
