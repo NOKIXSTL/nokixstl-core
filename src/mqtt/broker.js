@@ -12,13 +12,13 @@ const serverMQTT = () =>{
 
   var settings = {
     port:1883,
-    host:'192.168.0.166'//IP DO SERVIDOR
+    host:'192.168.0.166',//IP DO SERVIDOR
+    //backend: pubsubsettings
   }
 
   var server = new mosca.Server(settings);
   server.on('ready', function(){
     console.log("ready");
   });
-
 }
 module.exports = serverMQTT;
