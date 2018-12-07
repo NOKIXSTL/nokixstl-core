@@ -9,7 +9,7 @@
     "start": "node server.js"
   },
   "engines": {
-    "node": "8.12.0"
+    "node": "10.x"
   },
   "keywords": [],
   "author": "Brian Marques Viana",
@@ -17,6 +17,7 @@
   "dependencies": {
     "cors": "^2.8.4",
     "express": "^4.16.4",
+    "mongodb": "^3.1.10",
     "mongoose": "^5.3.8",
     "mongoose-paginate": "^5.0.3",
     "mosca": "^2.8.3",
@@ -28,6 +29,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NOKIXSTL/nokixstl-core"
+    "url": "https://github.com/brianmviana/nokixstl-core"
   }
 }

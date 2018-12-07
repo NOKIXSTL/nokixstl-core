@@ -1,7 +1,7 @@
 var mosca = require('mosca');
-const express = require('express');
+const subscriber = require('./subscriber');
 
-const serverMQTT = () =>{
+const serverMQTT = () => {
   var pubsubsettings = {
     type: 'mqtt',
     json: true,
@@ -17,8 +17,10 @@ const serverMQTT = () =>{
   }
 
   var server = new mosca.Server(settings);
-  server.on('ready', function(){
-    console.log("ready");
-  });
+    server.on('ready', function(){
+      console.log("Servidor MQTT iniciado");
+      subscriber();
+      console.log("/semaforo iniciado");
+    });
 }
 module.exports = serverMQTT;

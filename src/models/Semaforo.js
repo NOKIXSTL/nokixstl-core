@@ -24,9 +24,6 @@ const SemaforoSchema = new mongoose.Schema({
     }
 });
 
-
-
-
 SemaforoSchema.plugin(mongoosePaginate);
 mongoose.model('Semaforo', SemaforoSchema);
 module.exports = SemaforoSchema;
